@@ -26,6 +26,11 @@ window.onload = function() {
   let randomIcon = Math.floor(Math.random() * icon.length);
   let randomNumber = Math.floor(Math.random() * number.length);
 
+  if (icon[randomIcon] === "♦" || icon[randomIcon] === "♥") {
+    document.querySelector("#icon-top").classList.add("red");
+    document.querySelector("#icon-bottom").classList.add("red");
+  }
+
   document.querySelector("#icon-top").innerHTML = icon[randomIcon];
   document.querySelector("#icon-bottom").innerHTML = icon[randomIcon];
   document.querySelector(".number").innerHTML = number[randomNumber];
